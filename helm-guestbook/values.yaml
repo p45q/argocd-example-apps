@@ -19,8 +19,7 @@ ingress:
     kubernetes.io/ingress.class: nginx
     kubernetes.io/tls-acme: "false"
   path: /
-  hosts:
-    - guestbook.jx.bieri.online
+  host: guestbook.jx.bieri.online
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
