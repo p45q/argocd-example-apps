@@ -9,7 +9,6 @@ metadata:
     heritage: {{ .Release.Service }}
 spec:
   type: {{ .Values.service.type }}
-  hostname: {{ .Values.service.hostname }}
   ports:
     - port: {{ .Values.service.port }}
       targetPort: http
