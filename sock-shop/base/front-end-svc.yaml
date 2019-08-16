@@ -6,11 +6,10 @@ metadata:
   labels:
     name: front-end
 spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 8079
-    nodePort: 30001
-    name: socks
-  selector:
-    name: front-end
+  type: ClusterIP
+  name: socks
+  externalPort: 80
+  internalPort: 8079
+  annotations:
+    fabric8.io/expose: "true"
+    fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
